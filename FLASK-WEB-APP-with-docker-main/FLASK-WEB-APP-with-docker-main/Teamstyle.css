@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.team{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+.center h1{
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0b2545;
+    transition: 0.5s;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #34495e;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--blue);
+}
+
+.logout-btn {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: var(--blue);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.container .box{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.container .box .imgBx{
+position: absolute;
+inset: 0;
+border-radius: 12px;
+border: 4px solid rgb(0,0,0,0.2);
+}
+.container .box .imgBx img
+{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.container .box:hover .imgBx img {
+    opacity: 0.5;
+}
+
+.container .box .glass
+{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( #fff2,transparent);
+    border: 1px solid #6a82a0;
+    box-shadow: 0 15px 15px #083a63;
+    backdrop-filter: blur(15px);
+    border-radius:10px ;
+    scale: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+.container .box .glass::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 33px;
+    background: #0b2545;
+}
+.container .box:hover
+{
+    transform: rotate(-15deg);
+}
+.container .box:hover .glass
+{
+    opacity: 1;
+    scale: 1;
+    transform: rotate(20deg);
+}
+.container .box .glass h3
+{
+    font-size: medium;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    text-transform:capitalize;
+    text-align: left;
+    padding-left: 3px;
+}
+.container .box #icons
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.container .box ul a
+{
+    color: #50698a;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.25s;
+    transition-delay: scale calc(0.2s * var(--i));
+}
+.container .box:hover ul a
+{
+    scale: 1;
+}
+.container .box ul a:hover
+{
+    color: #ffffff;
+}
+.button-wrapper {
+    text-align: center;
+    padding-top: 50px;
+}
+#tableForm {
+    display:block;
+}
+#tableForm {
+    margin-top: 20px; 
+    padding-left : 220px;
+}
+table
+{
+    width: 80%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-style:normal;
+}
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+th {
+    background-color: #c6d0ff;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}

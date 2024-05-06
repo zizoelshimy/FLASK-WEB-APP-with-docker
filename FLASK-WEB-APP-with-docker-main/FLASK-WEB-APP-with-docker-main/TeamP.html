@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Our Team</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Teamstyle.css') }}">       
+    </head>
+    <body>
+         <!-- Logout button -->
+         <header class="header">
+          
+            <form action="{{ url_for('auth.logout') }}" method="post" class="flex">
+                <button class="logout-btn">Logout</button>
+            </form>
+        </header>
+        <section class="team">
+            <div class="center">
+                <h1>Meet Our Team</h1>
+            </div>     
+        <!--############student1################-->
+        <div class="container">
+            <div class="box">
+                <div class="imgBx"> <img src="{{ url_for('static', filename='photo/Abdelhamed.jpg') }}" alt="Abdelhaemd.jpg">
+                    <div class="glass">                              
+                    <h3>
+                        <ul>
+                            <li>Name: Abdelhamed Hassan</li>
+                            <li>ID: 22010125</li>
+                            <li>Age: 20 </li>
+                            <li>CGPA: 3.8653 </li>
+                        </ul>
+                    </h3>
+                    <ul id="icons">
+                        <a href="mailto:abdelhamedhsn.2003@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                        <a href="https://github.com/abdelhamed72" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/abd-el-hamed-hassan-29a550265/" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </ul>
+                </div>
+                </div>
+            </div>       
+        <!--############student2################-->
+        <div class="box" data-color="clr2">
+            <div class="imgBx"> <img src="{{ url_for('static', filename='photo/Salma.jpg') }}" alt="Salma.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Salma Soliman</li>
+                        <li>ID: 22010111</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.3779</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:soly17282@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/salma-s0liman" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="#" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student3################-->
+        <div class="box" data-color="clr3">
+            <div class="imgBx"> <img src="{{ url_for('static', filename='photo/Marina.jpg') }}" alt="Marina.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Marina Maged</li>
+                        <li>ID: 22010382</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.9387</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:marina.maged200@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/MarinaaMaged" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/marina-maged-438445247" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student4################-->
+        <div class="box" data-color="clr4">
+            <div class="imgBx"> <img src="{{ url_for('static', filename='photo/Mariam.jpg') }}" alt="Mariam.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Mariam ElHabashi</li>
+                        <li>ID: 22010394</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.8268</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:mariamhabshi177@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/MariamHabshi17" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/mariam-habshi-8416a3198" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student5################-->
+        <div class="box" data-color="clr5">
+            <div class="imgBx"><img src="{{ url_for('static', filename='photo/Moataz.jpg') }}" alt="Moataz.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Moataz ElShimy</li>
+                        <li>ID: 22011453</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.7333</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:zizoelshimy8@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/zizoelshimy" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="linkedin.com/in/moataz-el-shimy-07b381281" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <button class="scrollButton" onclick="toggleTable()">See More</button>
+    </div>
+ <!--########################Table####################3-->
+        <div id="tableForm" style="display: none;">
+            <table id="teamTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>Age</th>
+                        <th>CGPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{ item[0] }}</td>
+                        <td>{{ item[1] }}</td>
+                        <td>{{ item[2] }}</td>
+                        <td>{{ item[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>                
+            </table>
+        </div>
+    </section>
+        <!--#########################################################################################################-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function toggleTable() {
+            var tableForm = document.getElementById('tableForm');
+            if (tableForm.style.display === "none") {
+                tableForm.style.display = "block";
+            } else {
+                tableForm.style.display = "none";
+            }
+        }
+    </script>    
+</body>
+</html>
