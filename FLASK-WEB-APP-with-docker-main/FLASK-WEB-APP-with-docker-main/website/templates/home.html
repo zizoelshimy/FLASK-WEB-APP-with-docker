@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#Join">Contact</a> 
+    </nav>
+    <section class="flex">
+     
+        <div id="menuButton" class="fas fa-bars" aria-label="Menu"></div> 
+    </section>
+  </header>
+ 
+  <div class="content-wrapper">
+    <!-- Home -->
+    <section class="Home" id="Home">
+        <div class="row">
+            <div class="content">
+                <h3>TEAM</h3>
+                <a href="team" class="btn">Meet Our Team</a>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='photo/programmer.jpg') }}" alt="programmer.jpg">
+                <p>We are a team of second-year data science students, passionate about exploring the depths of data and uncovering insights that drive innovation and progress. Each member of our team brings a unique blend of skills & curiosity</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Us -->
+   
+    <section class="Join" id="Join">
+        <div class="row">
+            <div class="content">
+                <h3>Contact Us</h3>
+                <form class="join-form" id="joinForm" method="post">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+                    <textarea name="message" id="message" rows="5" placeholder="How can we assist you?" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+                <p id="successMessage" style="display: none; color: green;">Message sent successfully!</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("joinForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+  
+  
+          document.getElementById("successMessage").style.display = "block";
+  
+  
+          document.getElementById("joinForm").reset();
+        });
+      </script>
+  
+</body>
+</html>
