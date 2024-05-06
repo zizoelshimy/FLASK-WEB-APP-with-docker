@@ -1,2 +1,2 @@
 # FLASK-WEB-APP-with-docker
-project
+Dockerized Web application showing our Team's Data using Database.
