@@ -7,9 +7,12 @@
     </head>
     <body>
          <!-- Logout button -->
-    <form action="{{ url_for('auth.logout') }}" method="post">
-        <button class="logout-btn">Logout</button>
-    </form>    
+         <header class="header">
+          
+            <form action="{{ url_for('auth.logout') }}" method="post" class="flex">
+                <button class="logout-btn">Logout</button>
+            </form>
+        </header>
         <section class="team">
             <div class="center">
                 <h1>Meet Our Team</h1>
